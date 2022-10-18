@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 body{
-  
+   color: #383e45;
 }
 
-a{
-  :none;
+a {
+  text-decoration: none;
 }
