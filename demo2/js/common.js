@@ -58,6 +58,7 @@ $(function(){
 				$aslla.removeClass('_on')
 				$target.addClass('_on')
 			}
+			
 			//最初でありかつ最後ではない
 			if ( i == 0 && !( i == (aasLength - 1) ) ) {
 				var thisFireNext = $aas.eq(i+1).offset().top - $w.height()/2;
