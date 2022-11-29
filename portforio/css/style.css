@@ -15,17 +15,55 @@ a {
   text-decoration: none;
 }
 
-.width{
-    
+header{
+   letter-spacing: 0.1em;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-.header-top{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5vw;
+.header-width{
+  display: flex;
+  background-color: #FFFFFF;
+  
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6.6062vw;
+  height: 5.8565vw;
+}
+
+.hamburger-button .hamburger-bars {
+  font-size: 2.8571vw;
+  color: #666;
+}
+
+
+.hamburger-navi-menu {
+  margin: 10px;
+  
+}
+
+
+.hamburger-button {
+  display: block;
+  position: absolute;
+  right: 4vw;
+  color: #606060;
 }
 
 
 
+.hamburger-menu {
+  /*width: 100vw;*/
+  position: absolute;
+  font-size: 2.266666666666667vw;
+  background-color: #ffffff;
+  right: 4vw;
+  top:6vw;
+}
+
+.nav-button a{
+  font-size: 1.3vw;
+}
