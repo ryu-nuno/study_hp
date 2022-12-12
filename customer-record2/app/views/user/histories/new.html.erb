@@ -1,0 +1,22 @@
+<main>
+<div class="containar">
+  <div class="row no-gutters">
+    <div class="col-md-5 col-sm-10 mx-2 mx-sm-auto shadow-lg rounded px-0 my-5">
+
+<h2 class="text-dark bg-light p-4 mb-0">顧客進捗登録</h2>
+  <div class="form-body p-4">
+<%= form_with model: @history, local: true do |f| %>
+  <h4>接触方法</h4>
+  <%= f.select :action, [["電話", "電話"], ["商談", "商談"]], include_blank: "選択して下さい" %>
+  <h4>結果</h4>
+  <%= f.select :result, [["話できなかった", "話できなかった"], ["話できた", "話できた"], ["アポ取得", "アポ取得"], ["取引あり", "取引あり"]], include_blank: "選択して下さい" %>
+  <h4>次の行動・メモ</h4>
+  <%= f.text_area :caption %>
+  <%= f.hidden_field :customer_id, :value => @customer %>
+  <%= f.submit '登録',class:"btn btn-lg btn-block btn-info mt-4" %>
+<% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>

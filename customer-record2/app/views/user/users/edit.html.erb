@@ -1,0 +1,31 @@
+<main>
+  <div class="container">
+    <h2 style="margin-top:20px;">会員情報編集</h2>
+
+<%= form_with model:@user, url:user_path(current_user), local:true do |f|%>
+      <table>
+        <tr>
+          <th>
+            <h6>氏名</h6>
+            <%= f.text_field :name%>
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+            <h6>メールアドレス</h6>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </th>
+        </tr>
+
+      </table>
+
+      <div class="actions" style="margin-top:20px;">
+        <%= f.submit "変更内容を保存",class: "btn btn-success" %>
+      </div>
+    <% end %>
+    <div style="margin-top:20px;">
+    <%#=link_to '退会する', customers_unsubscribe_path, class: 'btn btn-danger' %>
+    </div>
+  </div>
+</main>

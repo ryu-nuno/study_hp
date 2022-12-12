@@ -1,0 +1,58 @@
+<main>
+  <div class="container">
+
+    <div class="search-form">
+  <%= form_with url: search_path, method: :get, local: true do |f| %>
+    <%= f.text_field :keyword, value: @keyword %>
+    <%= f.submit "検索" ,class:"btn-success"%>
+  <% end %>
+    </div>
+
+
+    <h3 style="margin-top:20px;">顧客一覧</h3>
+    <div class="text-right index-new" style ="margin-bottom:20;">
+    <%= link_to new_customer_path do %>
+      <button type="button" class="btn btn-circle btn-lg">＋</button>
+    <% end %>
+  </div>
+    <table class="table">
+      <tr>
+        <td>
+          顧客名
+        </td>
+        <td>
+          住所
+        </td>
+        <td>
+          ステータス
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <%@customers.each do |customer|%>
+      <tr>
+        <td>
+          <%= customer.customer_name %>
+        </td>
+        <td>
+          <%= customer.address %>
+        </td>
+        <td>
+          ー
+        </td>
+        <td>
+          <%= link_to '顧客詳細',customer_path(customer.id), class:"btn btn-success" %>
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <%end%>
+    </table>
+    <%= paginate @customers %>
+  </div>
+</main>

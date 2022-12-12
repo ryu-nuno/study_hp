@@ -1,0 +1,25 @@
+<main>
+    <div class="container">
+        <h2 style="margin-top:20px;">マイページ</h2>
+        <h4 style="margin-top:20px;">登録情報</h4>
+        <div style="margin:20px 0; ">
+
+        </div>
+        <table class="table table-bordered">
+            <tr>
+                <th>名前</th>
+                <td><%= @user.name%></td>
+            </tr>
+
+            <tr>
+                <th>メールアドレス</th>
+                <td><%= @user.email%></td>
+            </tr>
+        </table>
+        <h3 style="margin:20px 0; ">ユーザー情報編集</h3>
+        <%= link_to '編集する',edit_user_path(current_user), class: "btn btn-success" %>
+        <h3 style="margin:20px 0; ">顧客一覧</h3>
+        <%= link_to '一覧を見る',customers_path, class: "btn btn-primary" %>
+
+    </div>
+</main>

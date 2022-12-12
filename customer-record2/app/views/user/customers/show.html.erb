@@ -1,0 +1,93 @@
+<main>
+  <div class="container">
+    <h3 style="margin-top:20px;">顧客詳細</h3>
+    <table class="table table-borderless">
+      <tr>
+        <th>
+          顧客名
+        </th>
+        <td>
+          <%= @customer.customer_name %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          住所
+        </th>
+        <td>
+          <%= @customer.address %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          電話番号
+        </th>
+        <td>
+          <%= @customer.telephone_number %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          担当者
+        </th>
+        <td>
+          <%= @customer.manager %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          メモ
+        </th>
+        <td>
+          <%= @customer.memo%>
+        </td>
+      </tr>
+    </table>
+    <%= link_to '編集する',edit_customer_path, class:"btn btn-success" %>
+    <%= link_to "顧客情報を削除する", customer_path(@customer.id), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %>
+    <%= link_to '顧客履歴の追加',new_history_path(customer_id: @customer.id), class:"btn btn-primary" %>
+
+    <%#= paginate @customers %>
+
+
+
+<h3 style="margin-top:20px;">履歴一覧</h3>
+
+    <table class="table">
+      <tr>
+        <td>
+          投稿日
+        </td>
+        <td>
+          アクション
+        </td>
+        <td>
+          結果
+        </td>
+        <td>
+          次回行動・メモ
+        </td>
+      </tr>
+      <%@customer.histories.each do |history|%>
+      <tr>
+        <td>
+          <%= history.created_at.strftime('%Y/%m/%d') %>
+        </td>
+        <td>
+          <%= history.action %>
+        </td>
+        <td>
+          <%= history.result %>
+        </td>
+        <td>
+          <%= history.caption %>
+        </td>
+        <td>
+              <%= link_to "顧客情報を削除する", history_path(history.id), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %>
+        </td>
+      </tr>
+      <%end%>
+    </table>
+    <%#= paginate @historys %>
+  </div>
+</main>
