@@ -6,10 +6,10 @@ html {
   font-size: 62.5%;
 }
 
-body {
-    background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
-    background: -webkit-linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
-    background: linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+main{
+    background: -moz-linear-gradient(45deg, #f2f7f5 0%, #c2e7f0 29%, #f4ebfc 66%, #ffa079 100%);
+    background: -webkit-linear-gradient(45deg, #f2f7f5 0%,#c2e7f0 29%,#f4ebfc 66%,#ffa079 100%);
+    background: linear-gradient(45deg, #02e1ba 0%,#c2e7f0 29%,#f4ebfc 66%,#ffa079 100%);
     background-size: 400% 400%;
     -webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
@@ -23,8 +23,8 @@ body {
 	position: relative; 
 }
 
-body::before, 
-body::after {
+main::before, 
+main::after {
 	content: "";
 	width: 70vmax;
 	height: 70vmax;
@@ -39,7 +39,7 @@ body::after {
 	pointer-events: none; 
 }
 	
-body::after {
+main::after {
     width: 70vmin;
     height: 70vmin;
     left: auto;
@@ -127,7 +127,7 @@ a {
 header{
    letter-spacing: 0.1em;
   /*position: fixed;*/
-  z-index: 0;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -136,7 +136,6 @@ header{
 .header-width{
   display: flex;
   background-color: #FFFFFF;
-  
   justify-content: space-between;
   align-items: center;
   padding: 3vw 6.6062vw;
@@ -168,9 +167,11 @@ header{
   /*width: 100vw;*/
   position: absolute;
   font-size: 2.266666666666667vw;
-  background-color: #ffffff;
+  background-color: #fff;
+  opacity: 0.9;
   right: 1vw;
   top:6vw;
+  z-index: 1;
 }
 
 .nav-button a{
@@ -182,8 +183,8 @@ header{
   text-align: center;
 }
 
-.row h2{
-  font-size: 4vw;
+.row h4{
+  font-size: 3vw;
 }
 
 .row p{
