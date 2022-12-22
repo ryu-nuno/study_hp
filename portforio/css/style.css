@@ -6,7 +6,7 @@ html {
   font-size: 62.5%;
 }
 
-main{
+body{
     background: -moz-linear-gradient(45deg, #f2f7f5 0%, #c2e7f0 29%, #f4ebfc 66%, #ffa079 100%);
     background: -webkit-linear-gradient(45deg, #f2f7f5 0%,#c2e7f0 29%,#f4ebfc 66%,#ffa079 100%);
     background: linear-gradient(45deg, #02e1ba 0%,#c2e7f0 29%,#f4ebfc 66%,#ffa079 100%);
@@ -23,8 +23,8 @@ main{
 	position: relative; 
 }
 
-main::before, 
-main::after {
+body::before, 
+body::after {
 	content: "";
 	width: 70vmax;
 	height: 70vmax;
@@ -39,7 +39,7 @@ main::after {
 	pointer-events: none; 
 }
 	
-main::after {
+body::after {
     width: 70vmin;
     height: 70vmin;
     left: auto;
@@ -135,7 +135,7 @@ header{
 
 .header-width{
   display: flex;
-  background-color: #FFFFFF;
+  /*background-color: #FFFFFF;*/
   justify-content: space-between;
   align-items: center;
   padding: 3vw 6.6062vw;
@@ -158,7 +158,7 @@ header{
   display: block;
   position: absolute;
   right: 4vw;
-  color: #606060;
+  color: #2F4F4F;
 }
 
 
@@ -167,7 +167,7 @@ header{
   /*width: 100vw;*/
   position: absolute;
   font-size: 2.266666666666667vw;
-  background-color: #fff;
+  /*background-color: #fff;*/
   opacity: 0.9;
   right: 1vw;
   top:6vw;
@@ -185,8 +185,22 @@ header{
 
 .row h4{
   font-size: 3vw;
+  color: #2F4F4F;
 }
 
 .row p{
   font-size: 2vw;
+  color: #2F4F4F;
+}
+
+
+
+
+.footer-width{
+	padding: 3vw 6.6062vw;
+}
+
+
+.footer p{
+	font-size: 0.9vw;
 }
