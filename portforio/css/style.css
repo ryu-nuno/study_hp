@@ -133,6 +133,10 @@ header{
   right: 0;
 }
 
+.header-logo{
+	color: #333;
+}
+
 .header-width{
   display: flex;
   /*background-color: #FFFFFF;*/
@@ -189,12 +193,9 @@ header{
 }
 
 .row p{
-	
   font-size: 2vw;
   color: #2F4F4F;
 }
-
-
 
 
 .footer-width{
